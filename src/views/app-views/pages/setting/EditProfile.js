@@ -4,11 +4,12 @@ import { UserOutlined } from '@ant-design/icons';
 import { ROW_GUTTER } from 'constants/ThemeConstant';
 import Flex from 'components/shared-components/Flex';
 import { withRouter } from "react-router-dom";
+import { Space } from 'antd';
 
 
 const formItemLayout = {
 	labelCol: {
-		span: 10,
+		span: 30,
 	},
 	wrapperCol: {
 		span: 24,
@@ -88,11 +89,13 @@ export class EditProfile extends Component {
 		>
 			<Flex alignItems="center" mobileFlex={false} className="text-center text-md-left">
 				<Avatar size={90} src={this.avatarEndpoint} icon={<UserOutlined/>}/>
-				<div className="ml-md-3 mt-md-1 mt-3">
-					<Upload onChange={onUploadAavater} showUploadList={false} action={this.avatarEndpoint}>
-						<Button type="primary">Change Avatar</Button>
-					</Upload>
-					<Button className="ml-2" onClick={onRemoveAvater}>Remove</Button>
+				<div className="ml-md-3 mt-md-0 mt-0">
+					<Space direction="vertical">
+						<Upload onChange={onUploadAavater} showUploadList={false} action={this.avatarEndpoint}>
+							<Button type="primary">Change Avatar</Button>
+						</Upload>
+						<Button onClick={onRemoveAvater}>Remove</Button>
+					</Space>
 				</div>
 			</Flex>
 			<div className="mt-4">
