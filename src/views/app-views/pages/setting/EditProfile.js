@@ -88,7 +88,7 @@ export class EditProfile extends Component {
 		>
 			<Flex alignItems="center" mobileFlex={false} className="text-center text-md-left">
 				<Avatar size={90} src={this.avatarEndpoint} icon={<UserOutlined/>}/>
-				<div className="ml-md-3 mt-md-0 mt-3">
+				<div className="ml-md-3 mt-md-1 mt-3">
 					<Upload onChange={onUploadAavater} showUploadList={false} action={this.avatarEndpoint}>
 						<Button type="primary">Change Avatar</Button>
 					</Upload>
