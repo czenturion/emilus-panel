@@ -20,8 +20,6 @@ export class UserView extends Component {
 			return <></>
 		}
 
-		console.log(data)
-
 		return (
 			<Drawer
 				width={300}
